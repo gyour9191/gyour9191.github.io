@@ -1,0 +1,149 @@
+@keyframes move {
+    0%, 100% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(0px, 50px);
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+::selection{
+    color: #000000;
+    background-color: #ffffff;
+}
+
+nav{
+    position: fixed;
+    background-color: #2c2c2c;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+nav .menu{
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu .logo a{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.menu ul{
+    display: inline-block;
+}
+
+.menu ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 8px;
+}
+
+.menu ul li:first-child{
+    margin-left: 0px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu ul li a:hover{
+    background-color: #ffffff;
+    color: #2c2c2c;
+}
+
+.img{
+    background: url('background.png') no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center; 
+    position: relative;
+    animation: move 15s infinite linear;
+}
+
+.img::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.center{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.center .title{
+    color: #ffffff;
+    font-size: 55px;
+    font-weight: 600;
+}
+
+.center .sub_title{
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.center .btns{
+    margin-top: 60px;
+}
+
+.center .btns .line{
+    margin-bottom: 40px;
+}
+
+.center .btns button{
+    height: 35px;
+    width: 110px;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    margin: 0 10px;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 0 10px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.center .btns button{
+    color: #ffffff;
+    background-color: #2c2c2c00;
+}
+
+.center .btns button:hover{
+    color: #2c2c2c;
+    background-color: #ffffff;
+    margin: 0 20px;
+}
